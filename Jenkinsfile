@@ -1,8 +1,11 @@
-node {
-    checkout scm
-    def centosImage = docker.build("centos7-systemd", "./centos7/") 
+pipeline {
+    agent any
 
-    centosImage.inside {
-        sh 'echo Hello World'
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Replace with actual build step'
+            }
+        }
     }
 }
